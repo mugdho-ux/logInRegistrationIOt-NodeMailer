@@ -11,7 +11,7 @@ const AuthProvider = ({ children }) => {
     setToken(jwtToken);
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/me", {
+      const res = await fetch("http://192.168.88.60:5000/api/auth/me", {
         headers: { Authorization: `Bearer ${jwtToken}` },
       });
 

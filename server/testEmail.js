@@ -16,7 +16,7 @@ const nodemailer = require("nodemailer");
     // Send a test email
     const info = await transporter.sendMail({
       from: '"MQTT Alert" <samson.wisoky@ethereal.email>',
-      to: "mugdho.ux@gmail.com",   // replace with the email you want to test
+      to: "",   // replace with the email you want to test
       subject: "Test Email ✔",
       text: "This is a test email from Nodemailer",
       html: "<b>This is a test email from Nodemailer</b>",

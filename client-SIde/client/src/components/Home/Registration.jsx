@@ -42,7 +42,7 @@ const Registration = () => {
         const photoURL = imgData.data.url;
 
         // 2️⃣ Send data to backend
-        const res = await fetch("http://localhost:5000/api/auth/register", {
+        const res = await fetch("http://192.168.88.60:5000/api/auth/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

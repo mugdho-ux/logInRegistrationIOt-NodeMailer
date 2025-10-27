@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-const SOCKET_SERVER_URL = "http://localhost:4000"; // backend ব্রিজ যে পোর্টে চলছে
+const SOCKET_SERVER_URL = "http://192.168.88.60:4000"; // backend ব্রিজ যে পোর্টে চলছে
 
 export default function Dashboard() {
   const [data, setData] = useState([]);

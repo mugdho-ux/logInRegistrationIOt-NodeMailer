@@ -19,7 +19,7 @@ const handleLogIn = async (e) => {
   const password = e.target.password.value;
 
   try {
-    const res = await fetch("http://localhost:5000/api/auth/login", {
+    const res = await fetch("http://192.168.88.60:5000/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

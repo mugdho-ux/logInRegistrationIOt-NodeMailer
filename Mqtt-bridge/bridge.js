@@ -67,6 +67,6 @@ socket.on("publish_mqtt", ({ topic, message }) => {
   });
 });
 
-server.listen(4000, () =>
+server.listen(4000,"0.0.0.0", () =>
   console.log("🚀 Bridge running on http://localhost:4000")
 );

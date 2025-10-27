@@ -10,7 +10,7 @@
 
 //   // সব ইউজার লোড করা
 //   useEffect(() => {
-//     fetch("http://localhost:5000/api/auth/users", {
+//     fetch("http://192.168.88.60:5000/api/auth/users", {
 //       headers: {
 //         Authorization: `Bearer ${localStorage.getItem("token")}`,
 //       },
@@ -27,7 +27,7 @@
 //       return;
 //     }
 
-//     fetch("http://localhost:5000/api/auth/assign-room", {
+//     fetch("http://192.168.88.60:5000/api/auth/assign-room", {
 //       method: "POST",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -101,7 +101,7 @@ const Admin = () => {
 
   // Load all users
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/users", {
+    fetch("http://192.168.88.60:5000/api/auth/users", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -114,7 +114,7 @@ const Admin = () => {
   // Load assigned rooms for the selected user
   useEffect(() => {
     if (selectedUser) {
-      fetch(`http://localhost:5000/api/auth/users/${selectedUser}/rooms`, {
+      fetch(`http://192.168.88.60:5000/api/auth/users/${selectedUser}/rooms`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -139,7 +139,7 @@ const Admin = () => {
       return;
     }
 
-    fetch("http://localhost:5000/api/auth/assign-room", {
+    fetch("http://192.168.88.60:5000/api/auth/assign-room", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -157,7 +157,7 @@ const Admin = () => {
         alert(data.message);
         setSelectedRoom("");
         // Refresh assigned rooms
-        fetch(`http://localhost:5000/api/auth/users/${selectedUser}/rooms`, {
+        fetch(`http://192.168.88.60:5000/api/auth/users/${selectedUser}/rooms`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -176,7 +176,7 @@ const Admin = () => {
       return;
     }
 
-    fetch("http://localhost:5000/api/auth/remove-room", {
+    fetch("http://192.168.88.60:5000/api/auth/remove-room", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -193,7 +193,7 @@ const Admin = () => {
       .then((data) => {
         alert(data.message);
         // Refresh assigned rooms
-        fetch(`http://localhost:5000/api/auth/users/${selectedUser}/rooms`, {
+        fetch(`http://192.168.88.60:5000/api/auth/users/${selectedUser}/rooms`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

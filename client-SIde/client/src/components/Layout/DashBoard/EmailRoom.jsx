@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-const SOCKET_SERVER_URL = "http://localhost:4000";
+const SOCKET_SERVER_URL = "http://192.168.88.60:4000";
 
 const EmailRoom = () => {
   const [socket, setSocket] = useState(null);
@@ -22,7 +22,7 @@ const EmailRoom = () => {
 
       // Trigger email if topic = 'ESP3' and payload = '50'
       if (topic === "ESP3" && payload === "50") {
-        fetch("http://localhost:5000/api/email/send-email", {
+        fetch("http://192.168.88.60:5000/api/email/send-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

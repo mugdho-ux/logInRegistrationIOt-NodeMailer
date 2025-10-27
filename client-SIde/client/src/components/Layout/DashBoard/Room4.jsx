@@ -2,7 +2,7 @@
 import  { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-const SOCKET_SERVER_URL = "http://localhost:4000";
+const SOCKET_SERVER_URL = "http://192.168.88.60:4000";
 const Room = () => {
  const [socket, setSocket] = useState(null);
   const [mqttData, setMqttData] = useState({});
